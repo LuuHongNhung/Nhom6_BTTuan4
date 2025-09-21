@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Bai10 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        System.out.println("Danh sách ban đầu: " + list);
+
+        System.out.print("Nhập vị trí cần thêm: ");
+        int viTriThem = sc.nextInt();
+        System.out.print("Nhập giá trị cần thêm: ");
+        int giaTri = sc.nextInt();
+        list.add(viTriThem, giaTri);
+        System.out.println("Danh sách sau khi thêm: " + list);
+
+        System.out.print("Nhập vị trí cần xóa: ");
+        int viTriXoa = sc.nextInt();
+        if (viTriXoa >= 0 && viTriXoa < list.size()) {
+            list.remove(viTriXoa);
+        }
+        System.out.println("Danh sách sau khi xóa: " + list);
+    }
+}
